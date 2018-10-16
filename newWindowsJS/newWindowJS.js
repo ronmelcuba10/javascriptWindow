@@ -1,7 +1,7 @@
 
 var d = function () {
     var uri = document.getElementsByTagName('video')[0].src
-    window.open(e(),'','width=200,height=100');
+    window.open(uri,'','width=200,height=100');
 }
 
 
@@ -15,10 +15,11 @@ for (var i = 0; i < list.length; i++) {
         var ul = list[i].getElementsByClassName('clips');
         var li_list = ul[0].getElementsByClassName('side-menu-clip-title');
         if (li_list.length > 1) {
+            console.log(` --- ${header_text} ---`);
             for (var y = 0; y < li_list.length; y++) {
                 counter += 1;
                 var videoname = li_list[y].innerText;
-                console.log(`${counter} - ${videoname} - ${header_text}`);
+                console.log(`${counter} - ${videoname}`);
                 names.push(`${counter} - ${videoname}`);
                 // Store the videos's: name, element and Url 
                 // future ...
